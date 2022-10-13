@@ -1,0 +1,30 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+bool asal(int x)
+{
+	bool kontrol=1;
+	for (int a = 2; a < int(sqrt(x)) + 1; a++)
+	{
+		if (x % a == 0)
+			kontrol = 0;
+	}
+	return kontrol;
+}
+
+int main()
+{
+	long long int sayı = 600851475143;
+	
+	for (int i = 2; i < int(sqrt(sayı)) + 1; i++)
+	{
+		if (sayı % i == 0 && asal(i))
+		{
+			cout << i << endl;
+		}
+	}
+
+}
+
+

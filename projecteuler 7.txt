@@ -1,0 +1,42 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+bool asal(int x)
+{
+	bool kontrol=1;
+	for (int a = 2; a < int(sqrt(x)) + 1; a++)
+	{
+		if (x % a == 0)
+			kontrol = 0;
+	}
+	return kontrol;
+}
+
+int main()
+{
+	int sayı=2;
+	int kaç=0;
+
+	
+	while (kaç < 10001)
+	{
+		
+		if (asal(sayı) == 1)
+		{
+			
+			kaç++;
+			
+		}
+		if (kaç == 10001)
+			break;
+		sayı++;
+
+	}
+	cout << kaç<<" "<<sayı;
+
+	
+	
+}
+
+

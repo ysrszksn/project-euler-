@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+
+
+
+int main()
+{
+    /*
+       int a = 1000000000;
+    int basamak = 0;
+    while (a > 0)
+    {
+        a = a / 10;
+        basamak++;
+
+        if (basamak < 10)
+            continue;
+        else
+            cout << basamak;
+    } 
+    */
+
+
+
+    
+    
+    unsigned long long first = 0, second = 1, next;
+    int toplam = 0;
+    int kontrol = 1;
+    unsigned long long değiş;
+    int a=0;
+    int b = 0;
+    while(kontrol > 0)
+    {
+        cout << "\n" << first;
+        next = first + second;
+        first = second;
+        second = next;
+        değiş = first;
+        b++;
+        while (değiş > 0)
+        {
+            değiş= değiş/ 10;
+            a++;
+        }
+        if (a < 1000)
+            continue;
+        else
+        {
+            kontrol = 0;
+            cout << "\n\n\n\n\n\n\n" << first << "  " << b;
+        }
+    }
+    
+
+}
+
+

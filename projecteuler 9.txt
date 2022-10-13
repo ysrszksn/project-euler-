@@ -1,0 +1,38 @@
+#include<iostream>
+#include<math.h>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+
+
+
+int main()
+{
+// a + b + c = 1000
+	//pow(a, 2);
+
+	int a, b, c;
+	int A, B, C;
+	int tekrarsayı = 1;
+	for (a = 1; a < 1000; a++)
+	{
+		for (b = a; b < 1000; b++)
+		{
+			tekrarsayı++;
+			c = sqrt(a * a + b * b);
+			if (a * a + b * b == c * c && a + b + c == 1000)
+			{
+				A = a;
+				B = b;
+				C = c;
+			}
+
+		}
+	}
+	cout << tekrarsayı << endl;
+	cout << A << " " << B << " " << C << endl;
+	cout << A * B * C;
+	
+}
+
+

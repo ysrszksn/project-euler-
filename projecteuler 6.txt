@@ -1,0 +1,14 @@
+	int sonuc;
+	int top = 0;
+	int tek = 0;
+	for (int i = 1; i <= 100; i++)
+	{
+		top = top + i;
+		tek = tek + pow(i, 2);
+	}
+
+
+	top = top * top;
+	sonuc = top - tek;
+
+	cout << sonuc;
