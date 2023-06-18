@@ -1,0 +1,19 @@
+// 	Power Digit Sum
+using System.Numerics;
+
+BigInteger number = BigInteger.Pow(2, 1000);
+int digitSum = CalculateDigitSum(number);
+
+Console.WriteLine(digitSum);
+
+int CalculateDigitSum(BigInteger number)
+{
+    int sum = 0;
+    while (number > 0)
+    {
+        sum += (int)(number % 10);
+        number /= 10;
+    }
+    return sum;
+}
+//	Power Digit Sum

@@ -1,0 +1,24 @@
+//	Coin Sums
+
+int target = 200;
+
+int[] coins = { 1, 2, 5, 10, 20, 50, 100, 200 };
+
+int pross()
+{
+    int[] ways = new int[201];
+    ways[0] = 1;
+    foreach (int coin in coins)
+    {
+        for (int i = coin; i <= target; i++)
+        {
+            ways[i] += ways[i - coin];
+        }
+    }
+    int totalWays = ways[200];
+    return totalWays;
+}
+
+Console.WriteLine(pross());
+
+// 	Coin Sums
